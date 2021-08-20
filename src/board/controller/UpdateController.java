@@ -51,6 +51,7 @@ public class UpdateController extends HttpServlet{
 
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		System.out.println("업뎃 get요청 옴");
 		int postNum = Integer.parseInt(req.getParameter("num"));
 		String pageNum = req.getParameter("pageNum");
 		BoardVo postVo = service.getUpdatePostInfo(postNum);

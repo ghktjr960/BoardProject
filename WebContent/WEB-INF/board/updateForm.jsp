@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>게시글 수정</title>
 <%	String id = (String)session.getAttribute("id");
 	if(id == null){ %>
 	<script>
@@ -17,12 +17,10 @@
 			alert("작성자만 수정이 가능합니다.");
 			history.go(-1);
 		</script>
-<% 
-		}
-	} else {
-%>
+<% 	} else{ %>
 </head>
 <body>
+
 	<h1>글수정</h1>
 		<form action="${pageContext.request.contextPath}//update.do?pageNum=${pageNum}" method="post" enctype="multipart/form-data">
 			<input type="hidden" name="num" value="${postVo.num}">
@@ -53,5 +51,9 @@
 	</table>
 		</form>
 </body>
-<% } %>
+<%			
+		}
+	} 
+%>
+
 </html>
